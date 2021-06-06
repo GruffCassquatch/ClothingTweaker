@@ -38,6 +38,5 @@ Delete ```ClothingTweaker.dll``` and all ```ClothingTweaker .json``` files from 
 * I am active on [The Long Dark Modding](https://discord.gg/QvFE7VV4WZ) Discord server
 	* **General questions and feedback:** post in my channel #cass
 	* **Troubleshooting:** 
-		* While in pre-release, post in my channel #cass 
-		* For mods not in pre-release, you can post in my channel #cass or in #troubleshooting 
+		* Post in my channel #cass or in #troubleshooting 
 		* Or create an issue here on GitHub if you're not on Discord
