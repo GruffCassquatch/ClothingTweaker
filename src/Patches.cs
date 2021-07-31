@@ -862,6 +862,83 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.workPantsMobility,
                                                         SettingsLegs.legsSettings.workPantsWeight);
                 }
+                else if (__instance.name == "GEAR_WorkPants")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsLegs.legsSettings.workPantsWarmth,
+                                                        SettingsLegs.legsSettings.workPantsWetWarmth,
+                                                        SettingsLegs.legsSettings.workPantsWindproof,
+                                                        SettingsLegs.legsSettings.workPantsWaterproof,
+                                                        SettingsLegs.legsSettings.workPantsProtection,
+                                                        SettingsLegs.legsSettings.workPantsMobility,
+                                                        SettingsLegs.legsSettings.workPantsWeight);
+                }
+                else if (__instance.name == "GEAR_BeanieCap")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.beanieCapWarmth,
+                                                        SettingsModClothes.modClothesSettings.beanieCapWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.beanieCapWindproof,
+                                                        SettingsModClothes.modClothesSettings.beanieCapWaterproof,
+                                                        SettingsModClothes.modClothesSettings.beanieCapProtection,
+                                                        SettingsModClothes.modClothesSettings.beanieCapMobility,
+                                                        SettingsModClothes.modClothesSettings.beanieCapWeight);
+                }
+                else if (__instance.name == "GEAR_SkiGoggles")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesWarmth,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesWindproof,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesWaterproof,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesProtection,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesMobility,
+                                                        SettingsModClothes.modClothesSettings.skiGogglesWeight);
+                }
+                else if (__instance.name == "GEAR_SkiMask")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.skiMaskWarmth,
+                                                        SettingsModClothes.modClothesSettings.skiMaskWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.skiMaskWindproof,
+                                                        SettingsModClothes.modClothesSettings.skiMaskWaterproof,
+                                                        SettingsModClothes.modClothesSettings.skiMaskProtection,
+                                                        SettingsModClothes.modClothesSettings.skiMaskMobility,
+                                                        SettingsModClothes.modClothesSettings.skiMaskWeight);
+                }
+                else if (__instance.name == "GEAR_PrisonCoat")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatWarmth,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatWindproof,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatWaterproof,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatProtection,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatMobility,
+                                                        SettingsModClothes.modClothesSettings.prisonCoatWeight);
+                }
+                else if (__instance.name == "GEAR_PrisonPants")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsWarmth,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsWindproof,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsWaterproof,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsProtection,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsMobility,
+                                                        SettingsModClothes.modClothesSettings.prisonPantsWeight);
+                }
+                else if (__instance.name == "GEAR_PrisonShirt")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtWarmth,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtWindproof,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtWaterproof,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtProtection,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtMobility,
+                                                        SettingsModClothes.modClothesSettings.prisonShirtWeight);
+                }
             }
         }
 

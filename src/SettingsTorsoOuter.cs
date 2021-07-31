@@ -425,7 +425,6 @@ namespace ClothingTweaker
 		[Slider(0f, 5f, 101, NumberFormat = "{0:0.##} kg")]
 		public float oldFashionedParkaWeight = 2.0f;
 
-
 		//Simple Parka
 		[Section("Simple Parka")]
 		[Name("Warmth")]
