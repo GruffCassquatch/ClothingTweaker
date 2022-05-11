@@ -7,7 +7,8 @@ namespace ClothingTweaker
 {
     internal static class Patches
     {
-        
+        private const string AstridBoots = "GEAR_AstridBoots";
+
         [HarmonyPatch(typeof(GearItem), "Awake")]
         private static class ChangeClothingParameters
         {
@@ -15,7 +16,7 @@ namespace ClothingTweaker
             internal static void Postfix(GearItem __instance)
             {
 
-                if (__instance.name == "GEAR_AstridBoots")
+                if (__instance.m_GearName == "GEAR_AstridBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.astridBootsWarmth,
@@ -26,7 +27,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.astridBootsMobility,
                                                         SettingsFeet.feetSettings.astridBootsWeight);
                 }
-                else if (__instance.name == "GEAR_AstridGloves")
+                else if (__instance.m_GearName == "GEAR_AstridGloves")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.astridGlovesWarmth,
@@ -37,7 +38,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.astridGlovesMobility,
                                                         SettingsHands.handsSettings.astridGlovesWeight);
                 }
-                else if (__instance.name == "GEAR_AstridJacket")
+                else if (__instance.m_GearName == "GEAR_AstridJacket")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.astridJacketWarmth,
@@ -48,7 +49,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.astridJacketMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.astridJacketWeight);
                 }
-                else if (__instance.name == "GEAR_AstridJeans")
+                else if (__instance.m_GearName == "GEAR_AstridJeans")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.astridJeansWarmth,
@@ -59,7 +60,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.astridJeansMobility,
                                                         SettingsLegs.legsSettings.astridJeansWeight);
                 }
-                else if (__instance.name == "GEAR_AstridSweater")
+                else if (__instance.m_GearName == "GEAR_AstridSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.astridSweaterWarmth,
@@ -70,7 +71,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.astridSweaterMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.astridSweaterWeight);
                 }
-                else if (__instance.name == "GEAR_AstridToque")
+                else if (__instance.m_GearName == "GEAR_AstridToque")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.astridToqueWarmth,
@@ -81,7 +82,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.astridToqueMobility,
                                                         SettingsHead.headSettings.astridToqueWeight);
                 }
-                else if (__instance.name == "GEAR_Balaclava")
+                else if (__instance.m_GearName == "GEAR_Balaclava")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.balaclavaWarmth,
@@ -92,7 +93,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.balaclavaMobility,
                                                         SettingsHead.headSettings.balaclavaWeight);
                 }
-                else if (__instance.name == "GEAR_BaseballCap")
+                else if (__instance.m_GearName == "GEAR_BaseballCap")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.baseballCapWarmth,
@@ -103,7 +104,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.baseballCapMobility,
                                                         SettingsHead.headSettings.baseballCapWeight);
                 }
-                else if (__instance.name == "GEAR_BasicBoots")
+                else if (__instance.m_GearName == "GEAR_BasicBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.trailBootsWarmth,
@@ -114,7 +115,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.trailBootsMobility,
                                                         SettingsFeet.feetSettings.trailBootsWeight);
                 }
-                else if (__instance.name == "GEAR_BasicGloves")
+                else if (__instance.m_GearName == "GEAR_BasicGloves")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.drivingGlovesWarmth,
@@ -125,7 +126,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.drivingGlovesMobility,
                                                         SettingsHands.handsSettings.drivingGlovesWeight);
                 }
-                else if (__instance.name == "GEAR_BasicShoes")
+                else if (__instance.m_GearName == "GEAR_BasicShoes")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.runningShoesWarmth,
@@ -136,7 +137,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.runningShoesMobility,
                                                         SettingsFeet.feetSettings.runningShoesWeight);
                 }
-                else if (__instance.name == "GEAR_BasicWinterCoat")
+                else if (__instance.m_GearName == "GEAR_BasicWinterCoat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.windbreakerWarmth,
@@ -147,7 +148,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.windbreakerMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.windbreakerWeight);
                 }
-                else if (__instance.name == "GEAR_BasicWoolHat")
+                else if (__instance.m_GearName == "GEAR_BasicWoolHat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.cottonToqueWarmth,
@@ -158,7 +159,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.cottonToqueMobility,
                                                         SettingsHead.headSettings.cottonToqueWeight);
                 }
-                else if (__instance.name == "GEAR_BasicWoolScarf")
+                else if (__instance.m_GearName == "GEAR_BasicWoolScarf")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.woolScarfWarmth,
@@ -169,7 +170,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.woolScarfMobility,
                                                         SettingsHead.headSettings.woolScarfWeight);
                 }
-                else if (__instance.name == "GEAR_BearSkinCoat")
+                else if (__instance.m_GearName == "GEAR_BearSkinCoat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.bearskinCoatWarmth,
@@ -180,7 +181,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.bearskinCoatMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.bearskinCoatWeight);
                 }
-                else if (__instance.name == "GEAR_CargoPants")
+                else if (__instance.m_GearName == "GEAR_CargoPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.cargoPantsWarmth,
@@ -191,7 +192,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.cargoPantsMobility,
                                                         SettingsLegs.legsSettings.cargoPantsWeight);
                 }
-                else if (__instance.name == "GEAR_ClimbingSocks")
+                else if (__instance.m_GearName == "GEAR_ClimbingSocks")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.climbingSocksWarmth,
@@ -202,7 +203,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.climbingSocksMobility,
                                                         SettingsFeet.feetSettings.climbingSocksWeight);
                 }
-                else if (__instance.name == "GEAR_CombatBoots")
+                else if (__instance.m_GearName == "GEAR_CombatBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.combatBootsWarmth,
@@ -213,7 +214,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.combatBootsMobility,
                                                         SettingsFeet.feetSettings.combatBootsWeight);
                 }
-                else if (__instance.name == "GEAR_CombatPants")
+                else if (__instance.m_GearName == "GEAR_CombatPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.combatPantsWarmth,
@@ -224,7 +225,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.combatPantsMobility,
                                                         SettingsLegs.legsSettings.combatPantsWeight);
                 }
-                else if (__instance.name == "GEAR_CottonHoodie")
+                else if (__instance.m_GearName == "GEAR_CottonHoodie")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.hoodieWarmth,
@@ -235,7 +236,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.hoodieMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.hoodieWeight);
                 }
-                else if (__instance.name == "GEAR_CottonScarf")
+                else if (__instance.m_GearName == "GEAR_CottonScarf")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.cottonScarfWarmth,
@@ -246,7 +247,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.cottonScarfMobility,
                                                         SettingsHead.headSettings.cottonScarfWeight);
                 }
-                else if (__instance.name == "GEAR_CottonShirt")
+                else if (__instance.m_GearName == "GEAR_CottonShirt")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.dressShirtWarmth,
@@ -257,7 +258,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.dressShirtMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.dressShirtWeight);
                 }
-                else if (__instance.name == "GEAR_CottonSocks")
+                else if (__instance.m_GearName == "GEAR_CottonSocks")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.sportsSocksWarmth,
@@ -268,7 +269,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.sportsSocksMobility,
                                                         SettingsFeet.feetSettings.sportsSocksWeight);
                 }
-                else if (__instance.name == "GEAR_CowichanSweater")
+                else if (__instance.m_GearName == "GEAR_CowichanSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.cowichanSweaterWarmth,
@@ -279,7 +280,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.cowichanSweaterMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.cowichanSweaterWeight);
                 }
-                else if (__instance.name == "GEAR_Crampons")
+                else if (__instance.m_GearName == "GEAR_Crampons")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsAccessories.accessorySettings.cramponsWarmth,
@@ -290,7 +291,7 @@ namespace ClothingTweaker
                                                         SettingsAccessories.accessorySettings.cramponsMobility,
                                                         SettingsAccessories.accessorySettings.cramponsWeight);
                 }
-                else if (__instance.name == "GEAR_DeerSkinBoots")
+                else if (__instance.m_GearName == "GEAR_DeerSkinBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.deerskinBootsWarmth,
@@ -301,7 +302,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.deerskinBootsMobility,
                                                         SettingsFeet.feetSettings.deerskinBootsWeight);
                 }
-                else if (__instance.name == "GEAR_DeerSkinPants")
+                else if (__instance.m_GearName == "GEAR_DeerSkinPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.deerskinPantsWarmth,
@@ -312,7 +313,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.deerskinPantsMobility,
                                                         SettingsLegs.legsSettings.deerskinPantsWeight);
                 }
-                else if (__instance.name == "GEAR_DownParka")
+                else if (__instance.m_GearName == "GEAR_DownParka")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.urbanParkaWarmth,
@@ -323,7 +324,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.urbanParkaMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.urbanParkaWeight);
                 }
-                else if (__instance.name == "GEAR_DownSkiJacket")
+                else if (__instance.m_GearName == "GEAR_DownSkiJacket")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.skiJacketWarmth,
@@ -334,7 +335,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.skiJacketMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.skiJacketWeight);
                 }
-                else if (__instance.name == "GEAR_DownVest")
+                else if (__instance.m_GearName == "GEAR_DownVest")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.downVestWarmth,
@@ -345,7 +346,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.downVestMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.downVestWeight);
                 }
-                else if (__instance.name == "GEAR_EarMuffs")
+                else if (__instance.m_GearName == "GEAR_EarMuffs")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsAccessories.accessorySettings.woolEarWrapWarmth,
@@ -356,7 +357,7 @@ namespace ClothingTweaker
                                                         SettingsAccessories.accessorySettings.woolEarWrapMobility,
                                                         SettingsAccessories.accessorySettings.woolEarWrapWeight);
                 }
-                else if (__instance.name == "GEAR_FishermanSweater")
+                else if (__instance.m_GearName == "GEAR_FishermanSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.fishermansSweaterWarmth,
@@ -367,7 +368,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.fishermansSweaterMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.fishermansSweaterWeight);
                 }
-                else if (__instance.name == "GEAR_FleeceMittens")
+                else if (__instance.m_GearName == "GEAR_FleeceMittens")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.fleeceMittensWarmth,
@@ -378,7 +379,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.fleeceMittensMobility,
                                                         SettingsHands.handsSettings.fleeceMittensWeight);
                 }
-                else if (__instance.name == "GEAR_FleeceSweater")
+                else if (__instance.m_GearName == "GEAR_FleeceSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.sweatshirtWarmth,
@@ -389,7 +390,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.sweatshirtMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.sweatshirtWeight);
                 }
-                else if (__instance.name == "GEAR_Gauntlets")
+                else if (__instance.m_GearName == "GEAR_Gauntlets")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.gauntletsWarmth,
@@ -400,7 +401,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.gauntletsMobility,
                                                         SettingsHands.handsSettings.gauntletsWeight);
                 }
-                else if (__instance.name == "GEAR_GreyMotherBoots")
+                else if (__instance.m_GearName == "GEAR_GreyMotherBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.mountaineeringBootsWarmth,
@@ -411,7 +412,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.mountaineeringBootsMobility,
                                                         SettingsFeet.feetSettings.mountaineeringBootsWeight);
                 }
-                else if (__instance.name == "GEAR_HeavyParka")
+                else if (__instance.m_GearName == "GEAR_HeavyParka")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.oldFashionedParkaWarmth,
@@ -422,7 +423,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.oldFashionedParkaMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.oldFashionedParkaWeight);
                 }
-                else if (__instance.name == "GEAR_HeavyWoolSweater")
+                else if (__instance.m_GearName == "GEAR_HeavyWoolSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.thickWoolSweaterWarmth,
@@ -433,7 +434,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.thickWoolSweaterMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.thickWoolSweaterWeight);
                 }
-                else if (__instance.name == "GEAR_InsulatedBoots")
+                else if (__instance.m_GearName == "GEAR_InsulatedBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.insulatedBootsWarmth,
@@ -444,7 +445,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.insulatedBootsMobility,
                                                         SettingsFeet.feetSettings.insulatedBootsWeight);
                 }
-                else if (__instance.name == "GEAR_InsulatedPants")
+                else if (__instance.m_GearName == "GEAR_InsulatedPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.snowPantsWarmth,
@@ -455,7 +456,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.snowPantsMobility,
                                                         SettingsLegs.legsSettings.snowPantsWeight);
                 }
-                else if (__instance.name == "GEAR_InsulatedVest")
+                else if (__instance.m_GearName == "GEAR_InsulatedVest")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.sportVestWarmth,
@@ -466,7 +467,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.sportVestMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.sportVestWeight);
                 }
-                else if (__instance.name == "GEAR_Jeans")
+                else if (__instance.m_GearName == "GEAR_Jeans")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.jeansWarmth,
@@ -477,7 +478,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.jeansMobility,
                                                         SettingsLegs.legsSettings.jeansWeight);
                 }
-                else if (__instance.name == "GEAR_LeatherShoes")
+                else if (__instance.m_GearName == "GEAR_LeatherShoes")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.leatherShoesWarmth,
@@ -488,7 +489,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.leatherShoesMobility,
                                                         SettingsFeet.feetSettings.leatherShoesWeight);
                 }
-                else if (__instance.name == "GEAR_LightParka")
+                else if (__instance.m_GearName == "GEAR_LightParka")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.simpleParkaWarmth,
@@ -499,7 +500,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.simpleParkaMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.simpleParkaWeight);
                 }
-                else if (__instance.name == "GEAR_LongUnderwear")
+                else if (__instance.m_GearName == "GEAR_LongUnderwear")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.thermalUnderwearWarmth,
@@ -510,7 +511,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.thermalUnderwearMobility,
                                                         SettingsLegs.legsSettings.thermalUnderwearWeight);
                 }
-                else if (__instance.name == "GEAR_LongUnderwearWool")
+                else if (__instance.m_GearName == "GEAR_LongUnderwearWool")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.woolLongjohnsWarmth,
@@ -521,7 +522,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.woolLongjohnsMobility,
                                                         SettingsLegs.legsSettings.woolLongjohnsWeight);
                 }
-                else if (__instance.name == "GEAR_MackinawJacket")
+                else if (__instance.m_GearName == "GEAR_MackinawJacket")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.mackinawJacketWarmth,
@@ -532,7 +533,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.mackinawJacketMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.mackinawJacketWeight);
                 }
-                else if (__instance.name == "GEAR_MilitaryParka")
+                else if (__instance.m_GearName == "GEAR_MilitaryParka")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.militaryCoatWarmth,
@@ -543,7 +544,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.militaryCoatMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.militaryCoatWeight);
                 }
-                else if (__instance.name == "GEAR_Mittens")
+                else if (__instance.m_GearName == "GEAR_Mittens")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.woolMittensWarmth,
@@ -554,7 +555,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.woolMittensMobility,
                                                         SettingsHands.handsSettings.woolMittensWeight);
                 }
-                else if (__instance.name == "GEAR_MooseHideBag")
+                else if (__instance.m_GearName == "GEAR_MooseHideBag")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsAccessories.accessorySettings.moosehideSatchelWarmth,
@@ -565,7 +566,7 @@ namespace ClothingTweaker
                                                         SettingsAccessories.accessorySettings.moosehideSatchelMobility,
                                                         SettingsAccessories.accessorySettings.moosehideSatchelWeight);
                 }
-                else if (__instance.name == "GEAR_MooseHideCloak")
+                else if (__instance.m_GearName == "GEAR_MooseHideCloak")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWarmth,
@@ -576,7 +577,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.moosehideCloakMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWeight);
                 }
-                else if (__instance.name == "GEAR_MuklukBoots")
+                else if (__instance.m_GearName == "GEAR_MuklukBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.mukluksWarmth,
@@ -587,7 +588,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.mukluksMobility,
                                                         SettingsFeet.feetSettings.mukluksWeight);
                 }
-                else if (__instance.name == "GEAR_PlaidShirt")
+                else if (__instance.m_GearName == "GEAR_PlaidShirt")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.plaidShirtWarmth,
@@ -598,7 +599,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.plaidShirtMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.plaidShirtWeight);
                 }
-                else if (__instance.name == "GEAR_PremiumWinterCoat")
+                else if (__instance.m_GearName == "GEAR_PremiumWinterCoat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.expeditionParkaWarmth,
@@ -609,7 +610,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.expeditionParkaMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.expeditionParkaWeight);
                 }
-                else if (__instance.name == "GEAR_QualityWinterCoat")
+                else if (__instance.m_GearName == "GEAR_QualityWinterCoat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.marinersPeaCoatWarmth,
@@ -620,7 +621,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.marinersPeaCoatMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.marinersPeaCoatWeight);
                 }
-                else if (__instance.name == "GEAR_RabbitskinHat")
+                else if (__instance.m_GearName == "GEAR_RabbitskinHat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.rabbitskinHatWarmth,
@@ -631,7 +632,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.rabbitskinHatMobility,
                                                         SettingsHead.headSettings.rabbitskinHatWeight);
                 }
-                else if (__instance.name == "GEAR_RabbitSkinMittens")
+                else if (__instance.m_GearName == "GEAR_RabbitSkinMittens")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.rabbitskinMittsWarmth,
@@ -642,7 +643,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.rabbitskinMittsMobility,
                                                         SettingsHands.handsSettings.rabbitskinMittsWeight);
                 }
-                else if (__instance.name == "GEAR_SkiBoots")
+                else if (__instance.m_GearName == "GEAR_SkiBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.skiBootsWarmth,
@@ -653,7 +654,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.skiBootsMobility,
                                                         SettingsFeet.feetSettings.skiBootsWeight);
                 }
-                else if (__instance.name == "GEAR_SkiGloves")
+                else if (__instance.m_GearName == "GEAR_SkiGloves")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.skiGlovesWarmth,
@@ -664,7 +665,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.skiGlovesMobility,
                                                         SettingsHands.handsSettings.skiGlovesWeight);
                 }
-                else if (__instance.name == "GEAR_SkiJacket")
+                else if (__instance.m_GearName == "GEAR_SkiJacket")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.lightShellWarmth,
@@ -675,7 +676,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.lightShellMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.lightShellWeight);
                 }
-                else if (__instance.name == "GEAR_TeeShirt")
+                else if (__instance.m_GearName == "GEAR_TeeShirt")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.tshirtWarmth,
@@ -686,7 +687,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.tshirtMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.tshirtWeight);
                 }
-                else if (__instance.name == "GEAR_Toque")
+                else if (__instance.m_GearName == "GEAR_Toque")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.woolToqueWarmth,
@@ -697,7 +698,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.woolToqueMobility,
                                                         SettingsHead.headSettings.woolToqueWeight);
                 }
-                else if (__instance.name == "GEAR_WillBoots")
+                else if (__instance.m_GearName == "GEAR_WillBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.mackenziesBootsWarmth,
@@ -708,7 +709,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.mackenziesBootsMobility,
                                                         SettingsFeet.feetSettings.mackenziesBootsWeight);
                 }
-                else if (__instance.name == "GEAR_WillPants")
+                else if (__instance.m_GearName == "GEAR_WillPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.mackenziesPantsWarmth,
@@ -719,7 +720,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.mackenziesPantsMobility,
                                                         SettingsLegs.legsSettings.mackenziesPantsWeight);
                 }
-                else if (__instance.name == "GEAR_WillParka")
+                else if (__instance.m_GearName == "GEAR_WillParka")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.mackenziesParkaWarmth,
@@ -730,7 +731,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.mackenziesParkaMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.mackenziesParkaWeight);
                 }
-                else if (__instance.name == "GEAR_WillShirt")
+                else if (__instance.m_GearName == "GEAR_WillShirt")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.mackenziesShirtWarmth,
@@ -741,7 +742,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.mackenziesShirtMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.mackenziesShirtWeight);
                 }
-                else if (__instance.name == "GEAR_WillSweater")
+                else if (__instance.m_GearName == "GEAR_WillSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.mackenziesSweaterWarmth,
@@ -752,7 +753,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.mackenziesSweaterMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.mackenziesSweaterWeight);
                 }
-                else if (__instance.name == "GEAR_WillToque")
+                else if (__instance.m_GearName == "GEAR_WillToque")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.mackenziesToqueWarmth,
@@ -763,7 +764,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.mackenziesToqueMobility,
                                                         SettingsHead.headSettings.mackenziesToqueWeight);
                 }
-                else if (__instance.name == "GEAR_WolfSkinCape")
+                else if (__instance.m_GearName == "GEAR_WolfSkinCape")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWarmth,
@@ -774,7 +775,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatMobility,
                                                         SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWeight);
                 }
-                else if (__instance.name == "GEAR_WoolShirt")
+                else if (__instance.m_GearName == "GEAR_WoolShirt")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.woolShirtWarmth,
@@ -785,7 +786,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.woolShirtMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.woolShirtWeight);
                 }
-                else if (__instance.name == "GEAR_WoolSocks")
+                else if (__instance.m_GearName == "GEAR_WoolSocks")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.woolSocksWarmth,
@@ -796,7 +797,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.woolSocksMobility,
                                                         SettingsFeet.feetSettings.woolSocksWeight);
                 }
-                else if (__instance.name == "GEAR_WoolSweater")
+                else if (__instance.m_GearName == "GEAR_WoolSweater")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsTorsoInner.torsoInnerSettings.thinWoolSweaterWarmth,
@@ -807,7 +808,7 @@ namespace ClothingTweaker
                                                         SettingsTorsoInner.torsoInnerSettings.thinWoolSweaterMobility,
                                                         SettingsTorsoInner.torsoInnerSettings.thinWoolSweaterWeight);
                 }
-                else if (__instance.name == "GEAR_WoolWrap")
+                else if (__instance.m_GearName == "GEAR_WoolWrap")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.longWoolScarfWarmth,
@@ -818,7 +819,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.longWoolScarfMobility,
                                                         SettingsHead.headSettings.longWoolScarfWeight);
                 }
-                else if (__instance.name == "GEAR_WoolWrapCap")
+                else if (__instance.m_GearName == "GEAR_WoolWrapCap")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHead.headSettings.fleeceCowlWarmth,
@@ -829,7 +830,7 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.fleeceCowlMobility,
                                                         SettingsHead.headSettings.fleeceCowlWeight);
                 }
-                else if (__instance.name == "GEAR_WorkBoots")
+                else if (__instance.m_GearName == "GEAR_WorkBoots")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsFeet.feetSettings.workBootsWarmth,
@@ -840,7 +841,7 @@ namespace ClothingTweaker
                                                         SettingsFeet.feetSettings.workBootsMobility,
                                                         SettingsFeet.feetSettings.workBootsWeight);
                 }
-                else if (__instance.name == "GEAR_WorkGloves")
+                else if (__instance.m_GearName == "GEAR_WorkGloves")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsHands.handsSettings.workGlovesWarmth,
@@ -851,7 +852,7 @@ namespace ClothingTweaker
                                                         SettingsHands.handsSettings.workGlovesMobility,
                                                         SettingsHands.handsSettings.workGlovesWeight);
                 }
-                else if (__instance.name == "GEAR_WorkPants")
+                else if (__instance.m_GearName == "GEAR_WorkPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.workPantsWarmth,
@@ -862,7 +863,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.workPantsMobility,
                                                         SettingsLegs.legsSettings.workPantsWeight);
                 }
-                else if (__instance.name == "GEAR_WorkPants")
+                else if (__instance.m_GearName == "GEAR_WorkPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsLegs.legsSettings.workPantsWarmth,
@@ -873,7 +874,7 @@ namespace ClothingTweaker
                                                         SettingsLegs.legsSettings.workPantsMobility,
                                                         SettingsLegs.legsSettings.workPantsWeight);
                 }
-                else if (__instance.name == "GEAR_BeanieCap")
+                else if (__instance.m_GearName == "GEAR_BeanieCap")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsModClothes.modClothesSettings.beanieCapWarmth,
@@ -884,7 +885,7 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.beanieCapMobility,
                                                         SettingsModClothes.modClothesSettings.beanieCapWeight);
                 }
-                else if (__instance.name == "GEAR_SkiGoggles")
+                else if (__instance.m_GearName == "GEAR_SkiGoggles")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsModClothes.modClothesSettings.skiGogglesWarmth,
@@ -895,7 +896,7 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.skiGogglesMobility,
                                                         SettingsModClothes.modClothesSettings.skiGogglesWeight);
                 }
-                else if (__instance.name == "GEAR_SkiMask")
+                else if (__instance.m_GearName == "GEAR_SkiMask")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsModClothes.modClothesSettings.skiMaskWarmth,
@@ -906,7 +907,7 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.skiMaskMobility,
                                                         SettingsModClothes.modClothesSettings.skiMaskWeight);
                 }
-                else if (__instance.name == "GEAR_PrisonCoat")
+                else if (__instance.m_GearName == "GEAR_PrisonCoat")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsModClothes.modClothesSettings.prisonCoatWarmth,
@@ -917,7 +918,7 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.prisonCoatMobility,
                                                         SettingsModClothes.modClothesSettings.prisonCoatWeight);
                 }
-                else if (__instance.name == "GEAR_PrisonPants")
+                else if (__instance.m_GearName == "GEAR_PrisonPants")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsModClothes.modClothesSettings.prisonPantsWarmth,
@@ -928,7 +929,7 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.prisonPantsMobility,
                                                         SettingsModClothes.modClothesSettings.prisonPantsWeight);
                 }
-                else if (__instance.name == "GEAR_PrisonShirt")
+                else if (__instance.m_GearName == "GEAR_PrisonShirt")
                 {
                     Patches.changePostfabParameters(__instance,
                                                         SettingsModClothes.modClothesSettings.prisonShirtWarmth,
@@ -938,6 +939,61 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.prisonShirtProtection,
                                                         SettingsModClothes.modClothesSettings.prisonShirtMobility,
                                                         SettingsModClothes.modClothesSettings.prisonShirtWeight);
+                }
+                else if (__instance.m_GearName == "GEAR_BearskinLeggings")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsWarmth,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsWindproof,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsWaterproof,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsProtection,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsMobility,
+                                                        SettingsModClothes.modClothesSettings.bearskinLeggingsWeight);
+                }
+                else if (__instance.m_GearName == "GEAR_DeerskinCoat")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatWarmth,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatWindproof,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatWaterproof,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatProtection,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatMobility,
+                                                        SettingsModClothes.modClothesSettings.deerskinCoatWeight);
+                }
+                else if (__instance.m_GearName == "GEAR_DeerskinGloves")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesWarmth,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesWindproof,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesWaterproof,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesProtection,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesMobility,
+                                                        SettingsModClothes.modClothesSettings.deerskinGlovesWeight);
+                }
+                else if (__instance.m_GearName == "GEAR_WolfskinBoots")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsWarmth,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsWindproof,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsWaterproof,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsProtection,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsMobility,
+                                                        SettingsModClothes.modClothesSettings.wolfskinBootsWeight);
+                }
+                else if (__instance.m_GearName == "GEAR_WolfskinHat")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatWarmth,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatWindproof,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatWaterproof,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatProtection,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatMobility,
+                                                        SettingsModClothes.modClothesSettings.wolfskinHatWeight);
                 }
             }
         }

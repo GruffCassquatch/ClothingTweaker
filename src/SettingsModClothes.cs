@@ -11,6 +11,7 @@ namespace ClothingTweaker
 		}
 
 		//Clothing Pack
+
 		[Section("Mod: Clothing Pack")]
 		[Name("Clothing Pack")]
 		[Description("Show clothes added by Clothing Pack mod")]
@@ -130,7 +131,205 @@ namespace ClothingTweaker
 		public float skiMaskWeight = 0.25f;
 
 
+
+		//Northfolk Clothing Pack
+
+		[Section("Mod: Northfolk Clothing Pack")]
+		[Name("Northfolk Clothing Pack")]
+		[Description("Show clothes added by Northfolk Clothing Pack mod")]
+		public bool northfolkPack = false;
+
+		//Bearskin Leggings
+		[Section("Bearskin Leggings")]
+		[Name("Warmth")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float bearskinLeggingsWarmth = 2.0f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 1.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float bearskinLeggingsWetWarmth = 1.5f;
+
+		[Name("Windproof")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float bearskinLeggingsWindproof = 2.0f;
+
+		[Name("Waterproof")]
+		[Description("Default is 60%")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		public float bearskinLeggingsWaterproof = 0.6f;
+
+		[Name("Protection")]
+		[Description("Default is 10%")]
+		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
+		public float bearskinLeggingsProtection = 10.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 5%")]
+		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
+		public float bearskinLeggingsMobility = 5.0f;
+
+		[Name("Weight")]
+		[Description("Default is 2 kg")]
+		[Slider(0f, 2.5f, 51, NumberFormat = "{0:0.##} kg")]
+		public float bearskinLeggingsWeight = 2.0f;
+
+
+		//Deerskin Coat
+		[Section("Deerskin Coat")]
+		[Name("Warmth")]
+		[Description("Default is 6°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float deerskinCoatWarmth = 6.0f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float deerskinCoatWetWarmth = 5.0f;
+
+		[Name("Windproof")]
+		[Description("Default is 5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float deerskinCoatWindproof = 5.0f;
+
+		[Name("Waterproof")]
+		[Description("Default is 80%")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		public float deerskinCoatWaterproof = 0.8f;
+
+		[Name("Protection")]
+		[Description("Default is 18%")]
+		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
+		public float deerskinCoatProtection = 18.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 20%")]
+		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
+		public float deerskinCoatMobility = 20.0f;
+
+		[Name("Weight")]
+		[Description("Default is 5 kg")]
+		[Slider(0f, 5f, 101, NumberFormat = "{0:0.##} kg")]
+		public float deerskinCoatWeight = 5.0f;
+
+
+		//Deerskin Gloves
+		[Section("Deerskin Gloves")]
+		[Name("Warmth")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float deerskinGlovesWarmth = 2.0f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 1.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float deerskinGlovesWetWarmth = 1.5f;
+
+		[Name("Windproof")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float deerskinGlovesWindproof = 2.0f;
+
+		[Name("Waterproof")]
+		[Description("Default is 50%")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		public float deerskinGlovesWaterproof = 0.5f;
+
+		[Name("Protection")]
+		[Description("Default is 5%")]
+		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
+		public float deerskinGlovesProtection = 5.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 5%")]
+		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
+		public float deerskinGlovesMobility = 5.0f;
+
+		[Name("Weight")]
+		[Description("Default is 1 kg")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:0.##} kg")]
+		public float deerskinGlovesWeight = 1.0f;
+
+
+		//Wolfskin Boots
+		[Section("Wolfskin Boots")]
+		[Name("Warmth")]
+		[Description("Default is 2.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinBootsWarmth = 2.5f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinBootsWetWarmth = 2.0f;
+
+		[Name("windproof")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinBootsWindproof = 2.0f;
+
+		[Name("Waterproof")]
+		[Description("Default is 50%")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		public float wolfskinBootsWaterproof = 0.5f;
+
+		[Name("Protection")]
+		[Description("Default is 7%")]
+		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
+		public float wolfskinBootsProtection = 7.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 5%")]
+		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
+		public float wolfskinBootsMobility = 5.0f;
+
+		[Name("Weight")]
+		[Description("Default is 2 kg")]
+		[Slider(0f, 5f, 101, NumberFormat = "{0:0.##} kg")]
+		public float wolfskinBootsWeight = 2.0f;
+
+		//Wolfskin Hat
+		[Section("Wolfskin Hat")]
+		[Name("Warmth")]
+		[Description("Default is 2°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinHatWarmth = 2.0f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 1.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinHatWetWarmth = 1.5f;
+
+		[Name("Windproof")]
+		[Description("Default is 1.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinHatWindproof = 1.5f;
+
+		[Name("Waterproof")]
+		[Description("Default is 30%")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		public float wolfskinHatWaterproof = 0.3f;
+
+		[Name("Protection")]
+		[Description("Default is 4%")]
+		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
+		public float wolfskinHatProtection = 4.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 0%")]
+		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
+		public float wolfskinHatMobility = 0.0f;
+
+		[Name("Weight")]
+		[Description("Default is 0.35 kg")]
+		[Slider(0f, 0.5f, 11, NumberFormat = "{0:0.##} kg")]
+		public float wolfskinHatWeight = 0.35f;
+
+
 		// Prison Pack
+
 		[Section("Mod: Prison Pack")]
 		[Name("Prison Pack")]
 		[Description("Show clothes added by Prison Pack mod")]
@@ -252,7 +451,7 @@ namespace ClothingTweaker
 
 		protected override void OnChange(FieldInfo field, object oldValue, object newValue)
 		{
-			if (field.Name == nameof(clothingPack) || field.Name == nameof(prisonPack))
+			if (field.Name == nameof(clothingPack) || field.Name == nameof(northfolkPack) || field.Name == nameof(prisonPack))
 			{
 				RefreshFields();
 			}
@@ -283,6 +482,48 @@ namespace ClothingTweaker
 			SetFieldVisible(nameof(skiMaskProtection), SettingsModClothes.modClothesSettings.clothingPack);
 			SetFieldVisible(nameof(skiMaskMobility), SettingsModClothes.modClothesSettings.clothingPack);
 			SetFieldVisible(nameof(skiMaskWeight), SettingsModClothes.modClothesSettings.clothingPack);
+
+			//
+			SetFieldVisible(nameof(bearskinLeggingsWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(bearskinLeggingsWetWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(bearskinLeggingsWindproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(bearskinLeggingsWaterproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(bearskinLeggingsProtection), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(bearskinLeggingsMobility), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(bearskinLeggingsWeight), SettingsModClothes.modClothesSettings.northfolkPack);
+
+			SetFieldVisible(nameof(deerskinCoatWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinCoatWetWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinCoatWindproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinCoatWaterproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinCoatProtection), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinCoatMobility), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinCoatWeight), SettingsModClothes.modClothesSettings.northfolkPack);
+
+			SetFieldVisible(nameof(deerskinGlovesWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinGlovesWetWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinGlovesWindproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinGlovesWaterproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinGlovesProtection), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinGlovesMobility), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(deerskinGlovesWeight), SettingsModClothes.modClothesSettings.northfolkPack);
+
+			SetFieldVisible(nameof(wolfskinBootsWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinBootsWetWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinBootsWindproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinBootsWaterproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinBootsProtection), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinBootsMobility), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinBootsWeight), SettingsModClothes.modClothesSettings.northfolkPack);
+
+			SetFieldVisible(nameof(wolfskinHatWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinHatWetWarmth), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinHatWindproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinHatWaterproof), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinHatProtection), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinHatMobility), SettingsModClothes.modClothesSettings.northfolkPack);
+			SetFieldVisible(nameof(wolfskinHatWeight), SettingsModClothes.modClothesSettings.northfolkPack);
+			//
 
 			SetFieldVisible(nameof(prisonCoatWarmth), SettingsModClothes.modClothesSettings.prisonPack);
 			SetFieldVisible(nameof(prisonCoatWetWarmth), SettingsModClothes.modClothesSettings.prisonPack);
