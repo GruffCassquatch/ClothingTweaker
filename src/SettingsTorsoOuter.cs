@@ -69,9 +69,9 @@ namespace ClothingTweaker
 		public float bearskinCoatWaterproof = 0.8f;
 
 		[Name("Protection")]
-		[Description("Default is 18%")]
+		[Description("Default is 15%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float bearskinCoatProtection = 18.0f;
+		public float bearskinCoatProtection = 15.0f;
 
 		[Name("Mobility")]
 		[Description("Default is 20%")]
@@ -373,9 +373,9 @@ namespace ClothingTweaker
 		public float moosehideCloakWaterproof = 0.9f;
 
 		[Name("Protection")]
-		[Description("Default is 25%")]
+		[Description("Default is 20%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float moosehideCloakProtection = 25.0f;
+		public float moosehideCloakProtection = 20.0f;
 
 		[Name("Mobility")]
 		[Description("Default is 10%")]
@@ -638,9 +638,9 @@ namespace ClothingTweaker
 		public float wolfskinCoatWaterproof = 0.6f;
 
 		[Name("Protection")]
-		[Description("Default is 15%")]
+		[Description("Default is 12%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float wolfskinCoatProtection = 15.0f;
+		public float wolfskinCoatProtection = 12.0f;
 
 		[Name("Mobility")]
 		[Description("Default is 15%")]

@@ -34,9 +34,9 @@ namespace ClothingTweaker
 		public float cramponsWaterproof = 0.7f;
 
 		[Name("Protection")]
-		[Description("Default is 10%")]
+		[Description("Default is 3%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float cramponsProtection = 10.0f;
+		public float cramponsProtection = 3.0f;
 
 		[Name("Mobility")]
 		[Description("Default is 5%")]
