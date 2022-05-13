@@ -152,67 +152,67 @@ namespace ClothingTweaker
 		public float bearskinLeggingsWetWarmth = 1.5f;
 
 		[Name("Windproof")]
-		[Description("Default is 2°C")]
+		[Description("Default is 1°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float bearskinLeggingsWindproof = 2.0f;
+		public float bearskinLeggingsWindproof = 1.0f;
 
 		[Name("Waterproof")]
-		[Description("Default is 60%")]
+		[Description("Default is 80%")]
 		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
-		public float bearskinLeggingsWaterproof = 0.6f;
+		public float bearskinLeggingsWaterproof = 0.8f;
 
 		[Name("Protection")]
-		[Description("Default is 10%")]
+		[Description("Default is 4%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float bearskinLeggingsProtection = 10.0f;
+		public float bearskinLeggingsProtection = 4.0f;
 
 		[Name("Mobility")]
-		[Description("Default is 5%")]
+		[Description("Default is 2%")]
 		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
-		public float bearskinLeggingsMobility = 5.0f;
+		public float bearskinLeggingsMobility = 2.0f;
 
 		[Name("Weight")]
-		[Description("Default is 2 kg")]
+		[Description("Default is 1 kg")]
 		[Slider(0f, 2.5f, 51, NumberFormat = "{0:0.##} kg")]
-		public float bearskinLeggingsWeight = 2.0f;
+		public float bearskinLeggingsWeight = 1.0f;
 
 
 		//Deerskin Coat
 		[Section("Deerskin Coat")]
 		[Name("Warmth")]
-		[Description("Default is 6°C")]
+		[Description("Default is 3°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float deerskinCoatWarmth = 6.0f;
+		public float deerskinCoatWarmth = 3.0f;
 
 		[Name("Warmth When Wet")]
-		[Description("Default is 5°C")]
+		[Description("Default is 2°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
 		public float deerskinCoatWetWarmth = 5.0f;
 
 		[Name("Windproof")]
-		[Description("Default is 5°C")]
+		[Description("Default is 3°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float deerskinCoatWindproof = 5.0f;
+		public float deerskinCoatWindproof = 3.0f;
 
 		[Name("Waterproof")]
-		[Description("Default is 80%")]
+		[Description("Default is 60%")]
 		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
-		public float deerskinCoatWaterproof = 0.8f;
+		public float deerskinCoatWaterproof = 0.6f;
 
 		[Name("Protection")]
-		[Description("Default is 18%")]
+		[Description("Default is 10%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float deerskinCoatProtection = 18.0f;
+		public float deerskinCoatProtection = 10.0f;
 
 		[Name("Mobility")]
-		[Description("Default is 20%")]
+		[Description("Default is 10%")]
 		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
-		public float deerskinCoatMobility = 20.0f;
+		public float deerskinCoatMobility = 10.0f;
 
 		[Name("Weight")]
-		[Description("Default is 5 kg")]
+		[Description("Default is 2.75 kg")]
 		[Slider(0f, 5f, 101, NumberFormat = "{0:0.##} kg")]
-		public float deerskinCoatWeight = 5.0f;
+		public float deerskinCoatWeight = 2.75f;
 
 
 		//Deerskin Gloves
@@ -223,9 +223,9 @@ namespace ClothingTweaker
 		public float deerskinGlovesWarmth = 2.0f;
 
 		[Name("Warmth When Wet")]
-		[Description("Default is 1.5°C")]
+		[Description("Default is 1°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float deerskinGlovesWetWarmth = 1.5f;
+		public float deerskinGlovesWetWarmth = 1f;
 
 		[Name("Windproof")]
 		[Description("Default is 2°C")]
@@ -233,19 +233,19 @@ namespace ClothingTweaker
 		public float deerskinGlovesWindproof = 2.0f;
 
 		[Name("Waterproof")]
-		[Description("Default is 50%")]
+		[Description("Default is 60%")]
 		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
-		public float deerskinGlovesWaterproof = 0.5f;
+		public float deerskinGlovesWaterproof = 0.6f;
 
 		[Name("Protection")]
-		[Description("Default is 5%")]
+		[Description("Default is 3%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float deerskinGlovesProtection = 5.0f;
+		public float deerskinGlovesProtection = 3.0f;
 
 		[Name("Mobility")]
-		[Description("Default is 5%")]
+		[Description("Default is 0%")]
 		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
-		public float deerskinGlovesMobility = 5.0f;
+		public float deerskinGlovesMobility = 0.0f;
 
 		[Name("Weight")]
 		[Description("Default is 1 kg")]
@@ -261,29 +261,29 @@ namespace ClothingTweaker
 		public float wolfskinBootsWarmth = 2.5f;
 
 		[Name("Warmth When Wet")]
-		[Description("Default is 2°C")]
+		[Description("Default is 1.5°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float wolfskinBootsWetWarmth = 2.0f;
+		public float wolfskinBootsWetWarmth = 1.5f;
 
-		[Name("windproof")]
-		[Description("Default is 2°C")]
+		[Name("Windproof")]
+		[Description("Default is 1.5°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float wolfskinBootsWindproof = 2.0f;
+		public float wolfskinBootsWindproof = 1.5f;
 
 		[Name("Waterproof")]
-		[Description("Default is 50%")]
+		[Description("Default is 20%")]
 		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
-		public float wolfskinBootsWaterproof = 0.5f;
+		public float wolfskinBootsWaterproof = 0.2f;
 
 		[Name("Protection")]
-		[Description("Default is 7%")]
+		[Description("Default is 5%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float wolfskinBootsProtection = 7.0f;
+		public float wolfskinBootsProtection = 5.0f;
 
 		[Name("Mobility")]
-		[Description("Default is 5%")]
+		[Description("Default is 0%")]
 		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
-		public float wolfskinBootsMobility = 5.0f;
+		public float wolfskinBootsMobility = 0.0f;
 
 		[Name("Weight")]
 		[Description("Default is 2 kg")]
@@ -293,9 +293,9 @@ namespace ClothingTweaker
 		//Wolfskin Hat
 		[Section("Wolfskin Hat")]
 		[Name("Warmth")]
-		[Description("Default is 2°C")]
+		[Description("Default is 2.5°C")]
 		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
-		public float wolfskinHatWarmth = 2.0f;
+		public float wolfskinHatWarmth = 2.5f;
 
 		[Name("Warmth When Wet")]
 		[Description("Default is 1.5°C")]
@@ -308,14 +308,14 @@ namespace ClothingTweaker
 		public float wolfskinHatWindproof = 1.5f;
 
 		[Name("Waterproof")]
-		[Description("Default is 30%")]
+		[Description("Default is 20%")]
 		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
-		public float wolfskinHatWaterproof = 0.3f;
+		public float wolfskinHatWaterproof = 0.2f;
 
 		[Name("Protection")]
-		[Description("Default is 4%")]
+		[Description("Default is 5%")]
 		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
-		public float wolfskinHatProtection = 4.0f;
+		public float wolfskinHatProtection = 5.0f;
 
 		[Name("Mobility")]
 		[Description("Default is 0%")]
@@ -323,9 +323,9 @@ namespace ClothingTweaker
 		public float wolfskinHatMobility = 0.0f;
 
 		[Name("Weight")]
-		[Description("Default is 0.35 kg")]
+		[Description("Default is 0.4 kg")]
 		[Slider(0f, 0.5f, 11, NumberFormat = "{0:0.##} kg")]
-		public float wolfskinHatWeight = 0.35f;
+		public float wolfskinHatWeight = 0.4f;
 
 
 		// Prison Pack
