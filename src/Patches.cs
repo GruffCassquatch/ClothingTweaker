@@ -995,6 +995,17 @@ namespace ClothingTweaker
                                                         SettingsModClothes.modClothesSettings.wolfskinHatMobility,
                                                         SettingsModClothes.modClothesSettings.wolfskinHatWeight);
                 }
+                else if (__instance.m_GearName == "GEAR_wolfscarf")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
+                                                        SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
+                }
             }
         }
 

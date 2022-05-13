@@ -449,9 +449,52 @@ namespace ClothingTweaker
 		public float prisonShirtWeight = 0.25f;
 
 
+		// Wolfskin Scarf
+
+		[Section("Mod: Wolfskin Scarf")]
+		[Name("Wolfskin Scarf")]
+		[Description("Show clothes added by Wolfskin Scarf mod")]
+		public bool wolfskinScarf = false;
+
+		[Section("Wolfskin Scarf")]
+		[Name("Warmth")]
+		[Description("Default is 3°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinScarfWarmth = 3.0f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 1.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinScarfWetWarmth = 1.5f;
+
+		[Name("Windproof")]
+		[Description("Default is 2.5°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float wolfskinScarfWindproof = 2.5f;
+
+		[Name("Waterproof")]
+		[Description("Default is 35%")]
+		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		public float wolfskinScarfWaterproof = 0.35f;
+
+		[Name("Protection")]
+		[Description("Default is 5%")]
+		[Slider(0f, 50f, 51, NumberFormat = "{0:F0}%")]
+		public float wolfskinScarfProtection = 5.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 0%")]
+		[Slider(0f, 25f, 26, NumberFormat = "{0:F0}%")]
+		public float wolfskinScarfMobility = 0.0f;
+
+		[Name("Weight")]
+		[Description("Default is 0.6 kg")]
+		[Slider(0f, 5f, 101, NumberFormat = "{0:0.##} kg")]
+		public float wolfskinScarfWeight = 0.6f;
+
 		protected override void OnChange(FieldInfo field, object oldValue, object newValue)
 		{
-			if (field.Name == nameof(clothingPack) || field.Name == nameof(northfolkPack) || field.Name == nameof(prisonPack))
+			if (field.Name == nameof(clothingPack) || field.Name == nameof(northfolkPack) || field.Name == nameof(prisonPack) || field.Name == nameof(wolfskinScarf))
 			{
 				RefreshFields();
 			}
@@ -523,8 +566,8 @@ namespace ClothingTweaker
 			SetFieldVisible(nameof(wolfskinHatProtection), SettingsModClothes.modClothesSettings.northfolkPack);
 			SetFieldVisible(nameof(wolfskinHatMobility), SettingsModClothes.modClothesSettings.northfolkPack);
 			SetFieldVisible(nameof(wolfskinHatWeight), SettingsModClothes.modClothesSettings.northfolkPack);
+			
 			//
-
 			SetFieldVisible(nameof(prisonCoatWarmth), SettingsModClothes.modClothesSettings.prisonPack);
 			SetFieldVisible(nameof(prisonCoatWetWarmth), SettingsModClothes.modClothesSettings.prisonPack);
 			SetFieldVisible(nameof(prisonCoatWindproof), SettingsModClothes.modClothesSettings.prisonPack);
@@ -549,12 +592,34 @@ namespace ClothingTweaker
 			SetFieldVisible(nameof(prisonShirtMobility), SettingsModClothes.modClothesSettings.prisonPack);
 			SetFieldVisible(nameof(prisonShirtWeight), SettingsModClothes.modClothesSettings.prisonPack);
 
+			//
+			SetFieldVisible(nameof(wolfskinScarfWarmth), SettingsModClothes.modClothesSettings.wolfskinScarf);
+			SetFieldVisible(nameof(wolfskinScarfWetWarmth), SettingsModClothes.modClothesSettings.wolfskinScarf);
+			SetFieldVisible(nameof(wolfskinScarfWindproof), SettingsModClothes.modClothesSettings.wolfskinScarf);
+			SetFieldVisible(nameof(wolfskinScarfWaterproof), SettingsModClothes.modClothesSettings.wolfskinScarf);
+			SetFieldVisible(nameof(wolfskinScarfProtection), SettingsModClothes.modClothesSettings.wolfskinScarf);
+			SetFieldVisible(nameof(wolfskinScarfMobility), SettingsModClothes.modClothesSettings.wolfskinScarf);
+			SetFieldVisible(nameof(wolfskinScarfWeight), SettingsModClothes.modClothesSettings.wolfskinScarf);
 		}
 		protected override void OnConfirm()
 		{
 			base.OnConfirm();
+			ChangePrefabs();
+		}
+
+		internal void ChangePrefabs()
+		{
+			Patches.ChangePrefabParameters("GEAR_wolfscarf",
+											SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
+											SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
+											SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
+											SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
+											SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
+											SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
+											SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
 		}
 	}
+
 
 	internal static class SettingsModClothes
 	{
@@ -565,6 +630,7 @@ namespace ClothingTweaker
 			modClothesSettings = new ClothingTweakerModClothesSettings("ClothingTweakerModClothes");
 			modClothesSettings.AddToModSettings("Clothing Tweaker: Mod Clothes");
 			modClothesSettings.RefreshFields();
+			modClothesSettings.ChangePrefabs();
 		}
 	}
 }
