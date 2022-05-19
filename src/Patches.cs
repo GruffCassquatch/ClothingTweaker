@@ -7,15 +7,11 @@ namespace ClothingTweaker
 {
     internal static class Patches
     {
-        private const string AstridBoots = "GEAR_AstridBoots";
-
         [HarmonyPatch(typeof(GearItem), "Awake")]
         private static class ChangeClothingParameters
         {
-
             internal static void Postfix(GearItem __instance)
             {
-
                 if (__instance.m_GearName == "GEAR_AstridBoots")
                 {
                     Patches.changePostfabParameters(__instance,
