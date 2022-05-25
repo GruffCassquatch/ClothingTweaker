@@ -452,8 +452,8 @@ namespace ClothingTweaker
 		// Wolfskin Scarf
 
 		[Section("Mod: Wolfskin Scarf")]
-		[Name("Wolfskin Scarf")]
-		[Description("Show clothes added by Wolfskin Scarf mod")]
+		[Name("Is the Wolfskin Scarf mod installed?")]
+		[Description("MelonLoader will log a harmless error if you choose YES and CONFIRM without the mod installed.")]
 		public bool wolfskinScarf = false;
 
 		[Section("Wolfskin Scarf")]
@@ -566,7 +566,7 @@ namespace ClothingTweaker
 			SetFieldVisible(nameof(wolfskinHatProtection), SettingsModClothes.modClothesSettings.northfolkPack);
 			SetFieldVisible(nameof(wolfskinHatMobility), SettingsModClothes.modClothesSettings.northfolkPack);
 			SetFieldVisible(nameof(wolfskinHatWeight), SettingsModClothes.modClothesSettings.northfolkPack);
-			
+
 			//
 			SetFieldVisible(nameof(prisonCoatWarmth), SettingsModClothes.modClothesSettings.prisonPack);
 			SetFieldVisible(nameof(prisonCoatWetWarmth), SettingsModClothes.modClothesSettings.prisonPack);
@@ -609,14 +609,17 @@ namespace ClothingTweaker
 
 		internal void ChangePrefabs()
 		{
-			Patches.ChangePrefabParameters("GEAR_wolfscarf",
-											SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
-											SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
-											SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
-											SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
-											SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
-											SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
-											SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
+			if (wolfskinScarf)
+            {
+				Patches.ChangePrefabParameters("GEAR_wolfscarf",
+												SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
+												SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
+												SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
+												SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
+												SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
+												SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
+												SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
+            }
 		}
 	}
 

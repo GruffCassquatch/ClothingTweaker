@@ -7,11 +7,15 @@ namespace ClothingTweaker
 {
     internal static class Patches
     {
+        private const string AstridBoots = "GEAR_AstridBoots";
+
         [HarmonyPatch(typeof(GearItem), "Awake")]
         private static class ChangeClothingParameters
         {
+
             internal static void Postfix(GearItem __instance)
             {
+
                 if (__instance.m_GearName == "GEAR_AstridBoots")
                 {
                     Patches.changePostfabParameters(__instance,
@@ -1019,6 +1023,7 @@ namespace ClothingTweaker
         public static void ChangePrefabParameters(string name, float warmth, float wetwarmth, float windproof, float waterproof, float protection, float mobility, float weight)
         {
             GearItem item = GetGearItemPrefab(name);
+            if (item == null) return;
             item.m_ClothingItem.m_Warmth = warmth;
             item.m_ClothingItem.m_WarmthWhenWet = wetwarmth;
             item.m_ClothingItem.m_Windproof = windproof;
