@@ -5,7 +5,7 @@ Now you can wear anything you want, instead of the exact same 'best' set of clot
 
 _WILL BE INCOMPATIBLE WITH MODS THAT ALSO ALTER THESE CLOTHING STATS!_ 
 
-Includes support for the clothes added by [ClothingPack](https://github.com/ds5678/Clothing-Pack), [NorthfolkClothingPack](https://github.com/HAHAYOUDEAD/NorthfolkClothingPack), [PrisonPack](https://github.com/TheDevv/Prison-Pack) and [WolfskinScarf]([https://github.com/TheDevv/Prison-Pack](https://github.com/Atlas-Lumi/TLD-WolfskinScarf))      
+Includes support for the clothes added by [ClothingPack](https://github.com/ds5678/Clothing-Pack), [NorthfolkClothingPack](https://github.com/HAHAYOUDEAD/NorthfolkClothingPack), [PrisonPack](https://github.com/TheDevv/Prison-Pack) and [WolfskinScarf](https://github.com/Atlas-Lumi/TLD-WolfskinScarf)    
 
 
 Compatible with [Weight Tweaks](https://github.com/Xpazeman/tld-weight-tweaks) by Xpazeman, just leave the "Clothing Modifier" setting at 1.00 if you want to use Clothing Tweaker to modify clothing weight instead. It's fine to change "Worn Clothing Modifier".  
