@@ -27,7 +27,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 5%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float astridGlovesWaterproof = 0.05f;
 
 		[Name("Protection")]
@@ -65,7 +65,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 0%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float drivingGlovesWaterproof = 0.0f;
 
 		[Name("Protection")]
@@ -103,7 +103,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 5%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float fleeceMittensWaterproof = 0.05f;
 
 		[Name("Protection")]
@@ -141,7 +141,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 40%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float gauntletsWaterproof = 0.4f;
 
 		[Name("Protection")]
@@ -179,7 +179,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 50%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float rabbitskinMittsWaterproof = 0.5f;
 
 		[Name("Protection")]
@@ -217,7 +217,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float skiGlovesWaterproof = 0.3f;
 
 		[Name("Protection")]
@@ -255,7 +255,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float woolMittensWaterproof = 0.2f;
 
 		[Name("Protection")]
@@ -293,7 +293,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 0%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float workGlovesWaterproof = 0.0f;
 
 		[Name("Protection")]

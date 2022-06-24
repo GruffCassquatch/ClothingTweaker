@@ -9,7 +9,44 @@ namespace ClothingTweaker
 		public ClothingTweakerAccessoriesSettings(string relativeJsonFilePath) : base(relativeJsonFilePath)
 		{
 		}
-		private const string CRAMPONS = "GEAR_Crampons";
+
+		// Ballistic Vest
+		[Section("Ballistic Vest")]
+		[Name("Warmth")]
+		[Description("Default is 0°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float ballisticVestWarmth = 0.0f;
+
+		[Name("Warmth When Wet")]
+		[Description("Default is 0°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float ballisticVestWetWarmth = 0.0f;
+
+		[Name("Windproof")]
+		[Description("Default is 0°C")]
+		[Slider(0f, 10f, 41, NumberFormat = "{0:0.##}°C")]
+		public float ballisticVestWindproof = 0.0f;
+
+		[Name("Waterproof")]
+		[Description("Default is 0%")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
+		public float ballisticVestWaterproof = 0.0f;
+
+		[Name("Protection")]
+		[Description("Default is 50%")]
+		[Slider(0f, 75f, 76, NumberFormat = "{0:F0}%")]
+		public float ballisticVestProtection = 50.0f;
+
+		[Name("Mobility")]
+		[Description("Default is 40%")]
+		[Slider(0f, 75f, 76, NumberFormat = "{0:F0}%")]
+		public float ballisticVestMobility = 40f;
+
+		[Name("Weight")]
+		[Description("Default is 6 kg")]
+		[Slider(0f, 10f, 201, NumberFormat = "{0:0.##} kg")]
+		public float ballisticVestWeight = 6.0f;
+
 
 		//Crampons
 		[Section("Crampons")]
@@ -30,7 +67,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 70%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float cramponsWaterproof = 0.7f;
 
 		[Name("Protection")]
@@ -68,7 +105,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 0%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float moosehideSatchelWaterproof = 0.0f;
 
 		[Name("Protection")]
@@ -106,7 +143,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float woolEarWrapWaterproof = 0.20f;
 
 		[Name("Protection")]

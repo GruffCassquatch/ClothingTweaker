@@ -30,7 +30,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 25%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float climbingSocksWaterproof = 0.25f;
 
 		[Name("Protection")]
@@ -68,7 +68,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 0%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float sportsSocksWaterproof = 0.0f;
 
 		[Name("Protection")]
@@ -106,7 +106,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float woolSocksWaterproof = 0.2f;
 
 		[Name("Protection")]
@@ -147,7 +147,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float astridBootsWaterproof = 0.30f;
 
 		[Name("Protection")]
@@ -185,7 +185,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float combatBootsWaterproof = 0.20f;
 
 		[Name("Protection")]
@@ -223,7 +223,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 50%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float deerskinBootsWaterproof = 0.5f;
 
 		[Name("Protection")]
@@ -261,7 +261,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 50%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float insulatedBootsWaterproof = 0.5f;
 
 		[Name("Protection")]
@@ -299,7 +299,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 10%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float leatherShoesWaterproof = 0.1f;
 
 		[Name("Protection")]
@@ -337,7 +337,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float mackenziesBootsWaterproof = 0.3f;
 
 		[Name("Protection")]
@@ -375,7 +375,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 40%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float mountaineeringBootsWaterproof = 0.4f;
 
 		[Name("Protection")]
@@ -413,7 +413,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 40%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float mukluksWaterproof = 0.4f;
 
 		[Name("Protection")]
@@ -451,7 +451,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 0%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float runningShoesWaterproof = 0.0f;
 
 		[Name("Protection")]
@@ -489,7 +489,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float skiBootsWaterproof = 0.30f;
 
 		[Name("Protection")]
@@ -527,7 +527,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float trailBootsWaterproof = 0.3f;
 
 		[Name("Protection")]
@@ -565,7 +565,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 5%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float workBootsWaterproof = 0.05f;
 
 		[Name("Protection")]

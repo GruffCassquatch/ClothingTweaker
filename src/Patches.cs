@@ -93,6 +93,17 @@ namespace ClothingTweaker
                                                         SettingsHead.headSettings.balaclavaMobility,
                                                         SettingsHead.headSettings.balaclavaWeight);
                 }
+                else if (__instance.m_GearName == "GEAR_BallisticVest")
+                {
+                    Patches.changePostfabParameters(__instance,
+                                                        SettingsAccessories.accessorySettings.ballisticVestWarmth,
+                                                        SettingsAccessories.accessorySettings.ballisticVestWetWarmth,
+                                                        SettingsAccessories.accessorySettings.ballisticVestWindproof,
+                                                        SettingsAccessories.accessorySettings.ballisticVestWaterproof,
+                                                        SettingsAccessories.accessorySettings.ballisticVestProtection,
+                                                        SettingsAccessories.accessorySettings.ballisticVestMobility,
+                                                        SettingsAccessories.accessorySettings.ballisticVestWeight);
+                }
                 else if (__instance.m_GearName == "GEAR_BaseballCap")
                 {
                     Patches.changePostfabParameters(__instance,

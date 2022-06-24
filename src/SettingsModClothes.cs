@@ -36,7 +36,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 60%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float beanieCapWaterproof = 0.6f;
 
 		[Name("Protection")]
@@ -74,7 +74,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 50%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float skiGogglesWaterproof = 0.5f;
 
 		[Name("Protection")]
@@ -112,7 +112,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float skiMaskWaterproof = 0.3f;
 
 		[Name("Protection")]
@@ -158,7 +158,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 80%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float bearskinLeggingsWaterproof = 0.8f;
 
 		[Name("Protection")]
@@ -196,7 +196,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 60%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float deerskinCoatWaterproof = 0.6f;
 
 		[Name("Protection")]
@@ -234,7 +234,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 60%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float deerskinGlovesWaterproof = 0.6f;
 
 		[Name("Protection")]
@@ -272,7 +272,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float wolfskinBootsWaterproof = 0.2f;
 
 		[Name("Protection")]
@@ -309,7 +309,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float wolfskinHatWaterproof = 0.2f;
 
 		[Name("Protection")]
@@ -354,7 +354,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 30%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float prisonCoatWaterproof = 0.3f;
 
 		[Name("Protection")]
@@ -392,7 +392,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 0%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float prisonPantsWaterproof = 0f;
 
 		[Name("Protection")]
@@ -430,7 +430,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float prisonShirtWaterproof = 0.2f;
 
 		[Name("Protection")]
@@ -474,7 +474,7 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 35%")]
-		[Slider(0f, 1f, 21, NumberFormat = "{0:P0}")]
+		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
 		public float wolfskinScarfWaterproof = 0.35f;
 
 		[Name("Protection")]
