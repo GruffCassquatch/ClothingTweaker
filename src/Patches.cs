@@ -7,14 +7,25 @@ namespace ClothingTweaker
 {
     internal static class Patches
     {
-        private const string AstridBoots = "GEAR_AstridBoots";
-
         [HarmonyPatch(typeof(GearItem), "Awake")]
         private static class ChangeClothingParameters
         {
-
             internal static void Postfix(GearItem __instance)
             {
+                SettingsModClothes.modClothesSettings.ChangePrefabs();
+
+                /*
+                if (SettingsModClothes.modClothesSettings.wolfskinScarf)
+                {
+                    Patches.ChangePrefabParameters("GEAR_wolfscarf",
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
+                                    SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
+                }*/
 
                 if (__instance.m_GearName == "GEAR_AstridBoots")
                 {

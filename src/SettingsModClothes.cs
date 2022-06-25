@@ -131,9 +131,7 @@ namespace ClothingTweaker
 		public float skiMaskWeight = 0.25f;
 
 
-
 		//Northfolk Clothing Pack
-
 		[Section("Mod: Northfolk Clothing Pack")]
 		[Name("Northfolk Clothing Pack")]
 		[Description("Show clothes added by Northfolk Clothing Pack mod")]
@@ -633,7 +631,6 @@ namespace ClothingTweaker
 			modClothesSettings = new ClothingTweakerModClothesSettings("ClothingTweakerModClothes");
 			modClothesSettings.AddToModSettings("Clothing Tweaker: Mod Clothes");
 			modClothesSettings.RefreshFields();
-			modClothesSettings.ChangePrefabs();
 		}
 	}
 }
