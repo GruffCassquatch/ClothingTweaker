@@ -18,7 +18,7 @@ Includes support for the clothes added by [ClothingPack](https://github.com/ds56
 
 Based on [FurClothingMod](https://github.com/ds5678/FurClothingMod) by ds5678
 
-## Requirements
+## Requirements:
 [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
 
 [ModSettings](https://github.com/zeobviouslyfakeacc/ModSettings/releases)
