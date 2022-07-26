@@ -11,7 +11,7 @@ Includes support for the clothes added by [ClothingPack](https://github.com/ds56
 
 ## Limitations:
 * Compatible with [Weight Tweaks](https://github.com/Xpazeman/tld-weight-tweaks) by Xpazeman, just leave the "Clothing Modifier" setting at 1.00 if you want to use Clothing Tweaker to modify clothing weight instead. It's fine to change "Worn Clothing Modifier".  
-* Compatible with [GearDecayModifier](https://github.com/Xpazeman/tld-gear-decay-modifier), but be aware that if you use BOTH to change clothing decay, the efects are CUMULATIVE. GearDecayModifier will apply the same/single rate to all 3 decay rates that Clothing Tweaker has.
+* Compatible with [GearDecayModifier](https://github.com/Xpazeman/tld-gear-decay-modifier), but be aware that if you use BOTH to change clothing decay, the efects are CUMULATIVE. GearDecayModifier will apply the same/single rate to all 3 decay rates that Clothing Tweaker has. 
       * E.g. set both mods to reduce clothing decay by 50% and you will overall reduce decay by 75% (50% x 50%). 
       * If you only want Gear Decay Modifier to affect the decay rates, leave the Decay settings in Clothing Tweaker at 'Unchanged'.
       * If you only want Clothing Tweaker to affect the decay rates, leave the "Clothing decay rate" setting in Gear Decay Modifier at 1.
