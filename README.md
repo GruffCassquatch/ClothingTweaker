@@ -7,7 +7,9 @@ A mod for The Long Dark
 
 Now you can wear anything you want, instead of the exact same 'best' set of clothes every game! 
 
-Includes support for the clothes added by [ClothingPack](https://github.com/ds5678/Clothing-Pack), [NorthfolkClothingPack](https://github.com/HAHAYOUDEAD/NorthfolkClothingPack), [PrisonPack](https://github.com/TheDevv/Prison-Pack) and [WolfskinScarf](https://github.com/Atlas-Lumi/TLD-WolfskinScarf)    
+Includes support for the clothes added by [ClothingPack](https://github.com/ds5678/Clothing-Pack), [NorthfolkClothingPack](https://github.com/HAHAYOUDEAD/NorthfolkClothingPack), [PrisonPack](https://github.com/TheDevv/Prison-Pack) and [WolfskinScarf](https://github.com/Atlas-Lumi/TLD-WolfskinScarf)   
+
+Based on [FurClothingMod](https://github.com/ds5678/FurClothingMod) by ds5678.
 
 ## Limitations:
   * Compatible with [Weight Tweaks](https://github.com/Xpazeman/tld-weight-tweaks), but be aware that if you use BOTH to change clothing weight, the efects are CUMULATIVE. 
@@ -19,8 +21,6 @@ Includes support for the clothes added by [ClothingPack](https://github.com/ds56
       * Gear Decay Modifier uses ONE decay rate for all THREE types of decay (worn inside, worn outside, unworn).
       * If you only want Gear Decay Modifier to affect the decay rates, leave the Decay settings in Clothing Tweaker at 'Unchanged'.
       * If you only want Clothing Tweaker to affect the decay rates, leave the "Clothing decay rate" setting in Gear Decay Modifier at 1.
-
-Based on [FurClothingMod](https://github.com/ds5678/FurClothingMod) by ds5678
 
 ## Requirements:
 [MelonLoader](https://github.com/HerpDerpinstine/MelonLoader/releases/latest/download/MelonLoader.Installer.exe)
