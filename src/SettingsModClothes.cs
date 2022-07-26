@@ -607,16 +607,19 @@ namespace ClothingTweaker
 
 		internal void ChangePrefabs()
 		{
-			if (wolfskinScarf)
-            {
-				Patches.ChangePrefabParameters("GEAR_wolfscarf",
-												SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
-												SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
-												SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
-												SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
-												SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
-												SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
-												SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
+			if (SettingsMain.mainSettings.modFunction)
+			{
+				if (wolfskinScarf)
+				{
+					Patches.ChangePrefabParameters("GEAR_wolfscarf",
+													SettingsModClothes.modClothesSettings.wolfskinScarfWarmth,
+													SettingsModClothes.modClothesSettings.wolfskinScarfWetWarmth,
+													SettingsModClothes.modClothesSettings.wolfskinScarfWindproof,
+													SettingsModClothes.modClothesSettings.wolfskinScarfWaterproof,
+													SettingsModClothes.modClothesSettings.wolfskinScarfProtection,
+													SettingsModClothes.modClothesSettings.wolfskinScarfMobility,
+													SettingsModClothes.modClothesSettings.wolfskinScarfWeight);
+				}
             }
 		}
 	}
@@ -628,9 +631,12 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			modClothesSettings = new ClothingTweakerModClothesSettings("ClothingTweakerModClothes");
-			modClothesSettings.AddToModSettings("Clothing Tweaker: Mod Clothes");
-			modClothesSettings.RefreshFields();
+			if (SettingsMain.mainSettings.showModClothes != ShowHideDisable.Disable)
+			{
+				modClothesSettings = new ClothingTweakerModClothesSettings("ClothingTweakerModClothes");
+				if (SettingsMain.mainSettings.showModClothes == ShowHideDisable.Show) modClothesSettings.AddToModSettings("Clothing Tweaker: Mod Clothes");
+				modClothesSettings.RefreshFields();
+			}
 		}
 	}
 }

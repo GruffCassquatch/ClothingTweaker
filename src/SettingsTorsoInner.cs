@@ -508,8 +508,11 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			torsoInnerSettings = new ClothingTweakerTorsoInnerSettings("ClothingTweakerTorsoInner");
-			torsoInnerSettings.AddToModSettings("Clothing Tweaker: Torso (Inner)");
+			if (SettingsMain.mainSettings.showTorsoInner != ShowHideDisable.Disable)
+			{
+				torsoInnerSettings = new ClothingTweakerTorsoInnerSettings("ClothingTweakerTorsoInner");
+				if (SettingsMain.mainSettings.showTorsoInner == ShowHideDisable.Show) torsoInnerSettings.AddToModSettings("Clothing Tweaker: Torso (Inner)");
+			}
 		}
 	}
 }

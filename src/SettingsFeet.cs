@@ -591,7 +591,9 @@ namespace ClothingTweaker
 
 		internal void ChangePrefabs()
 		{
-			Patches.ChangePrefabParameters("GEAR_DeerSkinBoots",
+			if (SettingsMain.mainSettings.modFunction)
+			{
+				Patches.ChangePrefabParameters("GEAR_DeerSkinBoots",
 											SettingsFeet.feetSettings.deerskinBootsWarmth,
 											SettingsFeet.feetSettings.deerskinBootsWetWarmth,
 											SettingsFeet.feetSettings.deerskinBootsWindproof,
@@ -599,6 +601,7 @@ namespace ClothingTweaker
 											SettingsFeet.feetSettings.deerskinBootsProtection,
 											SettingsFeet.feetSettings.deerskinBootsMobility,
 											SettingsFeet.feetSettings.deerskinBootsWeight);
+			}
 		}
 	}
 
@@ -608,9 +611,12 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			feetSettings = new ClothingTweakerFeetSettings("ClothingTweakerFeet");
-			feetSettings.AddToModSettings("Clothing Tweaker: Feet");
-			feetSettings.ChangePrefabs();
+			if (SettingsMain.mainSettings.showFeet != ShowHideDisable.Disable)
+			{
+				feetSettings = new ClothingTweakerFeetSettings("ClothingTweakerFeet");
+				if (SettingsMain.mainSettings.showFeet == ShowHideDisable.Show) feetSettings.AddToModSettings("Clothing Tweaker: Feet");
+				feetSettings.ChangePrefabs();
+			}
 		}
 	}
 }

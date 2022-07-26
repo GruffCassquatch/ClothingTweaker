@@ -9,6 +9,7 @@ namespace ClothingTweaker
         public override void OnApplicationStart()
         {
             Debug.Log($"[{Info.Name}] Version {Info.Version} loaded!");
+            SettingsMain.OnLoad();
             SettingsAccessories.OnLoad();
             SettingsFeet.OnLoad();
             SettingsHands.OnLoad();

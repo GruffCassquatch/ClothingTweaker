@@ -71,6 +71,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\SettingsMain.cs" />
     <Compile Include="src\SettingsModClothes.cs" />
     <Compile Include="src\Implementation.cs" />
     <Compile Include="src\Patches.cs" />

@@ -660,7 +660,9 @@ namespace ClothingTweaker
 
 		internal void ChangePrefabs()
 		{
-			Patches.ChangePrefabParameters("GEAR_BearSkinCoat",
+			if (SettingsMain.mainSettings.modFunction)
+			{
+				Patches.ChangePrefabParameters("GEAR_BearSkinCoat",
 											SettingsTorsoOuter.torsoOuterSettings.bearskinCoatWarmth,
 											SettingsTorsoOuter.torsoOuterSettings.bearskinCoatWetWarmth,
 											SettingsTorsoOuter.torsoOuterSettings.bearskinCoatWindproof,
@@ -668,22 +670,23 @@ namespace ClothingTweaker
 											SettingsTorsoOuter.torsoOuterSettings.bearskinCoatProtection,
 											SettingsTorsoOuter.torsoOuterSettings.bearskinCoatMobility,
 											SettingsTorsoOuter.torsoOuterSettings.bearskinCoatWeight);
-			Patches.ChangePrefabParameters("GEAR_MooseHideCloak",
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWarmth,
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWetWarmth,
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWindproof,
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWaterproof,
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakProtection,
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakMobility,
-											SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWeight);
-			Patches.ChangePrefabParameters("GEAR_WolfSkinCape",
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWarmth,
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWetWarmth,
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWindproof,
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWaterproof,
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatProtection,
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatMobility,
-											SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWeight);
+				Patches.ChangePrefabParameters("GEAR_MooseHideCloak",
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWarmth,
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWetWarmth,
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWindproof,
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWaterproof,
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakProtection,
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakMobility,
+												SettingsTorsoOuter.torsoOuterSettings.moosehideCloakWeight);
+				Patches.ChangePrefabParameters("GEAR_WolfSkinCape",
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWarmth,
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWetWarmth,
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWindproof,
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWaterproof,
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatProtection,
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatMobility,
+												SettingsTorsoOuter.torsoOuterSettings.wolfskinCoatWeight);
+			}
 		}
 	}
 
@@ -693,9 +696,12 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			torsoOuterSettings = new ClothingTweakerTorsoOuterSettings("ClothingTweakerTorsoOuter");
-			torsoOuterSettings.AddToModSettings("Clothing Tweaker: Torso (Outer)");
-			torsoOuterSettings.ChangePrefabs();
+			if (SettingsMain.mainSettings.showTorsoOuter != ShowHideDisable.Disable)
+			{
+				torsoOuterSettings = new ClothingTweakerTorsoOuterSettings("ClothingTweakerTorsoOuter");
+				if (SettingsMain.mainSettings.showTorsoOuter == ShowHideDisable.Show) torsoOuterSettings.AddToModSettings("Clothing Tweaker: Torso (Outer)");
+				torsoOuterSettings.ChangePrefabs();
+			}
 		}
 	}
 }

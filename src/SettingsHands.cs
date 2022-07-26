@@ -319,7 +319,9 @@ namespace ClothingTweaker
 
 		internal void ChangePrefabs()
 		{
-			Patches.ChangePrefabParameters("GEAR_RabbitSkinMittens",
+			if (SettingsMain.mainSettings.modFunction)
+			{
+				Patches.ChangePrefabParameters("GEAR_RabbitSkinMittens",
 											SettingsHands.handsSettings.rabbitskinMittsWarmth,
 											SettingsHands.handsSettings.rabbitskinMittsWetWarmth,
 											SettingsHands.handsSettings.rabbitskinMittsWindproof,
@@ -327,6 +329,7 @@ namespace ClothingTweaker
 											SettingsHands.handsSettings.rabbitskinMittsProtection,
 											SettingsHands.handsSettings.rabbitskinMittsMobility,
 											SettingsHands.handsSettings.rabbitskinMittsWeight);
+			}
 		}
 	}
 
@@ -336,9 +339,12 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			handsSettings = new ClothingTweakerHandsSettings("ClothingTweakerHands");
-			handsSettings.AddToModSettings("Clothing Tweaker: Hands");
-			handsSettings.ChangePrefabs();
+			if (SettingsMain.mainSettings.showHands != ShowHideDisable.Disable)
+			{
+				handsSettings = new ClothingTweakerHandsSettings("ClothingTweakerHands");
+				if (SettingsMain.mainSettings.showHands == ShowHideDisable.Show) handsSettings.AddToModSettings("Clothing Tweaker: Hands");
+				handsSettings.ChangePrefabs();
+			}
 		}
 	}
 }

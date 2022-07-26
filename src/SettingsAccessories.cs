@@ -143,7 +143,8 @@ namespace ClothingTweaker
 
 		[Name("Waterproof")]
 		[Description("Default is 20%")]
-		[Slider(0f, 1f, 101, NumberFormat = "{0:P0}")]
+
+
 		public float woolEarWrapWaterproof = 0.20f;
 
 		[Name("Protection")]
@@ -168,14 +169,17 @@ namespace ClothingTweaker
 		}
 		internal void ChangePrefabs()
 		{
-			Patches.ChangePrefabParameters("GEAR_MooseHideBag",
-											SettingsAccessories.accessorySettings.moosehideSatchelWarmth,
-											SettingsAccessories.accessorySettings.moosehideSatchelWetWarmth,
-											SettingsAccessories.accessorySettings.moosehideSatchelWindproof,
-											SettingsAccessories.accessorySettings.moosehideSatchelWaterproof,
-											SettingsAccessories.accessorySettings.moosehideSatchelProtection,
-											SettingsAccessories.accessorySettings.moosehideSatchelMobility,
-											SettingsAccessories.accessorySettings.moosehideSatchelWeight);
+			if (SettingsMain.mainSettings.modFunction)
+			{
+				Patches.ChangePrefabParameters("GEAR_MooseHideBag",
+												SettingsAccessories.accessorySettings.moosehideSatchelWarmth,
+												SettingsAccessories.accessorySettings.moosehideSatchelWetWarmth,
+												SettingsAccessories.accessorySettings.moosehideSatchelWindproof,
+												SettingsAccessories.accessorySettings.moosehideSatchelWaterproof,
+												SettingsAccessories.accessorySettings.moosehideSatchelProtection,
+												SettingsAccessories.accessorySettings.moosehideSatchelMobility,
+												SettingsAccessories.accessorySettings.moosehideSatchelWeight);
+			}
 		}
 	}
 
@@ -185,9 +189,12 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			accessorySettings = new ClothingTweakerAccessoriesSettings("ClothingTweakerAccessories");
-			accessorySettings.AddToModSettings("Clothing Tweaker: Accessories");
-			accessorySettings.ChangePrefabs();
+			if (SettingsMain.mainSettings.showAccessories != ShowHideDisable.Disable)
+            {
+				accessorySettings = new ClothingTweakerAccessoriesSettings("ClothingTweakerAccessories");
+				if (SettingsMain.mainSettings.showAccessories == ShowHideDisable.Show) accessorySettings.AddToModSettings("Clothing Tweaker: Accessories");
+				accessorySettings.ChangePrefabs();
+            }
 		}
 	}
 }

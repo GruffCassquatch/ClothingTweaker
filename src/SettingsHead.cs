@@ -433,7 +433,9 @@ namespace ClothingTweaker
 
 		internal void ChangePrefabs()
 		{
-			Patches.ChangePrefabParameters("GEAR_RabbitskinHat",
+			if (SettingsMain.mainSettings.modFunction)
+			{
+				Patches.ChangePrefabParameters("GEAR_RabbitskinHat",
 											SettingsHead.headSettings.rabbitskinHatWarmth,
 											SettingsHead.headSettings.rabbitskinHatWetWarmth,
 											SettingsHead.headSettings.rabbitskinHatWindproof,
@@ -441,6 +443,7 @@ namespace ClothingTweaker
 											SettingsHead.headSettings.rabbitskinHatProtection,
 											SettingsHead.headSettings.rabbitskinHatMobility,
 											SettingsHead.headSettings.rabbitskinHatWeight);
+			}
 		}
 	}
 
@@ -450,9 +453,12 @@ namespace ClothingTweaker
 
 		public static void OnLoad()
 		{
-			headSettings = new ClothingTweakerHeadSettings("ClothingTweakerHead");
-			headSettings.AddToModSettings("Clothing Tweaker: Head");
-			headSettings.ChangePrefabs();
+			if (SettingsMain.mainSettings.showHead != ShowHideDisable.Disable)
+			{
+				headSettings = new ClothingTweakerHeadSettings("ClothingTweakerHead");
+				if (SettingsMain.mainSettings.showHead == ShowHideDisable.Show) headSettings.AddToModSettings("Clothing Tweaker: Head");
+				headSettings.ChangePrefabs();
+			}
 		}
 	}
 }
