@@ -10,7 +10,10 @@ Now you can wear anything you want, instead of the exact same 'best' set of clot
 Includes support for the clothes added by [ClothingPack](https://github.com/ds5678/Clothing-Pack), [NorthfolkClothingPack](https://github.com/HAHAYOUDEAD/NorthfolkClothingPack), [PrisonPack](https://github.com/TheDevv/Prison-Pack) and [WolfskinScarf](https://github.com/Atlas-Lumi/TLD-WolfskinScarf)    
 
 ## Limitations:
-  * Compatible with [Weight Tweaks](https://github.com/Xpazeman/tld-weight-tweaks) by Xpazeman, just leave the "Clothing Modifier" setting at 1.00 if you want to use Clothing Tweaker to modify clothing weight instead. It's fine to change "Worn Clothing Modifier".  
+  * Compatible with [Weight Tweaks](https://github.com/Xpazeman/tld-weight-tweaks), but be aware that if you use BOTH to change clothing weight, the efects are CUMULATIVE. 
+      * E.g. set Weight Tweaks "Clothing Modifier" to 0.5 and also set the weight of an item to 1kg in Clothing Tweaker: that item will weigh 0.5kg (1kg x 0.5). 
+      * If you only want Weight Tweaks to affect clothing weight, don't change any weight values in Clothing Tweaker.
+      * If you only want Clothing Tweaker to affect clothing weight, leave the "Clothing Modifier" setting in Weight Tweaks at 1.00.
   * Compatible with [GearDecayModifier](https://github.com/Xpazeman/tld-gear-decay-modifier), but be aware that if you use BOTH to change clothing decay, the efects are CUMULATIVE. 
       * E.g. set both mods to reduce clothing decay by 50% and you will overall reduce decay by 75% (50% x 50%). 
       * Gear Decay Modifier uses ONE decay rate for all THREE types of decay (worn inside, worn outside, unworn).
