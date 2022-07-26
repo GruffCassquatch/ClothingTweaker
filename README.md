@@ -52,9 +52,9 @@ Delete ```ClothingTweaker.dll``` and all ```ClothingTweaker .json``` files from 
 	* Menus will only Show/Hide when you RESTART the game!
 	* Showing/Hiding/Disabling any menus has no effect on Decay settings.
 
-5. Scroll across to the ```Clothing Tweaker``` menus (menus are organised by clothing slot).
-6. Scroll down to see all of the clothing items, change values using the sliders.
-7. Click ```CONFIRM``` to apply your changes or ```BACK``` to exit without applying changes.
+4. Scroll across to the ```Clothing Tweaker``` menus (menus are organised by clothing slot).
+5. Scroll down to see all of the clothing items, change values using the sliders.
+6. Click ```CONFIRM``` to apply your changes or ```BACK``` to exit without applying changes.
 
 
 ## To reset clothing stats to default:
