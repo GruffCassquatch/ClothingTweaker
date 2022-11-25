@@ -1,5 +1,6 @@
 # Clothing Tweaker
-A mod for The Long Dark
+A mod for The Long Dark    
+FOR GAME VERSION 2.00 / 2.02 (**PRE TALES FROM THE FAR TERRITORY**)    
 
 ## Mod features:
 * Allows you to adjust the warmth, warmth when wet, windproof, waterproof, protection, mobility and weight of clothing items. 
