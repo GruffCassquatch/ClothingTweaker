@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31229.75
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothingTweaker", "ClothingTweaker.csproj", "{57FF6607-E0BD-404D-B5CD-F217DEE73BCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClothingTweaker", "VisualStudio\ClothingTweaker.csproj", "{A6407FBE-BE24-4673-8F54-4DCFC5062CC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57FF6607-E0BD-404D-B5CD-F217DEE73BCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57FF6607-E0BD-404D-B5CD-F217DEE73BCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57FF6607-E0BD-404D-B5CD-F217DEE73BCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57FF6607-E0BD-404D-B5CD-F217DEE73BCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6407FBE-BE24-4673-8F54-4DCFC5062CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6407FBE-BE24-4673-8F54-4DCFC5062CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6407FBE-BE24-4673-8F54-4DCFC5062CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6407FBE-BE24-4673-8F54-4DCFC5062CC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7B58F369-7527-4AC7-AB3F-DFAA6BED4C67}
+		SolutionGuid = {5B5F6B01-B881-48AC-945D-8E6B2E713A1C}
 	EndGlobalSection
 EndGlobal
