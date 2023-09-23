@@ -80,8 +80,10 @@ namespace ClothingTweaker
 		[Description("SHOW menu; settings will be applied.\nHIDE menu; settings WILL STILL BE APPLIED.\nDISABLE menu; settings WILL NOT BE APPLIED.\nMenu will Show/Hide when you RESTART the game!")]
 		public ShowHideDisable showModClothes = ShowHideDisable.Show;
 		
-		protected override void OnChange(FieldInfo field, object oldValue, object newValue)
+		protected override void OnChange(FieldInfo field, object? oldValue, object? newValue)
 		{
+			base.OnChange(field, oldValue, newValue);
+
 			if (field.Name == nameof(modFunction) ||
 				field.Name == nameof(clothingDecay))
 			{
@@ -108,11 +110,10 @@ namespace ClothingTweaker
 
 	internal static class SettingsMain
 	{
-		public static ClothingTweakerMainSettings mainSettings;
+		public static ClothingTweakerMainSettings mainSettings { get; } = new("ClothingTweakerMainSettings");
 
-		public static void OnLoad()
+        public static void OnLoad()
 		{
-			mainSettings = new ClothingTweakerMainSettings("ClothingTweakerMainSettings");
 			mainSettings.AddToModSettings("Clothing Tweaker Main Settings");
 			mainSettings.RefreshFields();
 		}

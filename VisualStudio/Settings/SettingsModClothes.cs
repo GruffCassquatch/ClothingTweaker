@@ -490,9 +490,11 @@ namespace ClothingTweaker
 		[Slider(0f, 5f, 101, NumberFormat = "{0:0.##} kg")]
 		public float wolfskinScarfWeight = 0.6f;
 
-		protected override void OnChange(FieldInfo field, object oldValue, object newValue)
-		{
-			if (field.Name == nameof(clothingPack) || field.Name == nameof(northfolkPack) || field.Name == nameof(prisonPack) || field.Name == nameof(wolfskinScarf))
+        protected override void OnChange(FieldInfo field, object? oldValue, object? newValue)
+        {
+            base.OnChange(field, oldValue, newValue);
+
+            if (field.Name == nameof(clothingPack) || field.Name == nameof(northfolkPack) || field.Name == nameof(prisonPack) || field.Name == nameof(wolfskinScarf))
 			{
 				RefreshFields();
 			}
@@ -627,13 +629,12 @@ namespace ClothingTweaker
 
 	internal static class SettingsModClothes
 	{
-		public static ClothingTweakerModClothesSettings modClothesSettings;
+		public static ClothingTweakerModClothesSettings modClothesSettings { get; } = new("ClothingTweakerModClothes");
 
-		public static void OnLoad()
+        public static void OnLoad()
 		{
 			if (SettingsMain.mainSettings.showModClothes != ShowHideDisable.Disable)
 			{
-				modClothesSettings = new ClothingTweakerModClothesSettings("ClothingTweakerModClothes");
 				if (SettingsMain.mainSettings.showModClothes == ShowHideDisable.Show) modClothesSettings.AddToModSettings("Clothing Tweaker: Mod Clothes");
 				modClothesSettings.RefreshFields();
 			}

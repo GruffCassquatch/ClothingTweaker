@@ -1,0 +1,13 @@
+﻿[assembly: AssemblyTitle("ClothingTweaker")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ClothingTweaker")]
+[assembly: AssemblyCopyright("Copyright © 2022")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+
+[assembly: AssemblyVersion("2.5.0")]
+[assembly: AssemblyFileVersion("2.5.0")]
+[assembly: MelonInfo(typeof(ClothingTweaker.Implementation), "ClothingTweaker", "2.6.0", "GruffCassquatch, The Illusion")]
+[assembly: MelonGame("Hinterland", "TheLongDark")]
