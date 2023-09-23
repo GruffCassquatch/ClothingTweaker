@@ -1,10 +1,4 @@
-﻿using System;
-using HarmonyLib;
-using UnhollowerBaseLib;
-using UnityEngine;
-using MelonLoader;
-
-namespace ClothingTweaker
+﻿namespace ClothingTweaker
 {
     internal static class Patches
     {
